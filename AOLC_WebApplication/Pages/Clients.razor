@@ -1,0 +1,71 @@
+﻿@page "/Clients"
+@using AOLCWebApplication.Data
+@inject ClientService clientService
+
+<NavLink class="nav-link" href="AddClient">
+    <span class="oi oi-plus" aria-hidden="true">Add New</span>
+
+</NavLink>
+
+<h1>Client Info</h1>
+@if (ClientObj is null)
+{
+    <p><em>Loading... !</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                @*<th>Password</th>*@
+                <th>Phone</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Province</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var client in ClientObj)
+            {
+            <tr>
+                <td>@client.Id</td>
+                <td>@client.FirstName</td>
+                <td>@client.LastName</td>
+                <td>@client.Email</td>
+                @*<td>@client.Password</td>*@
+                <td>@client.Phone</td>
+                @*<td>@client.Gender</td>
+        <td>@client.Designation</td>*@
+                <td>@client.Address1</td>
+                <td>@client.City</td>
+                <td>@client.Province</td>
+                <td>@client.Description</td>
+
+                <td>
+                    <a class="nav-link" href="EditClient/@client.Id">
+                        <span class="oi oi-pencil" aria-hidden="true">Edit</span>
+                    </a>
+                    <a class="nav-link" href="Delete/@client.Id">
+                        <span class="oi oi-trash" aria-hidden="true">Delete</span>
+                    </a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+    List<Client> ClientObj;
+    protected override async Task OnInitializedAsync()
+    {
+        ClientObj = await Task.Run(() => clientService.GetAllClientsAsync());
+    }
+}

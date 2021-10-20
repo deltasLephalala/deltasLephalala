@@ -1,0 +1,108 @@
+﻿@page "/AddClient"
+@using AOLCWebApplication.Data
+@inject ClientService clientService
+@inject NavigationManager NavigationManager
+
+<h2>Add Client</h2>
+<hr />
+
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            @*<div class="form-group">
+            <label for="Image" class="control-label">FirstName</label>
+            <input form="Image" class="form-control" @bind="@obj.FirstName" />
+        </div>*@
+            <div class="form-group">
+                <label for="FirstName" class="control-label">FirstName</label>
+                <input form="FirstName" class="form-control" @bind="@obj.FirstName" />
+            </div>
+            <div class="form-group">
+                <label for="LastName" class="control-label">LastName</label>
+                <input form="LastName" class="form-control" @bind="@obj.LastName" />
+            </div>
+            <div class="form-group">
+                <label for="Email" class="control-label">Email</label>
+                <input form="Email" class="form-control" @bind="@obj.Email" />
+            </div>
+            <div class="form-group">
+                <label for="Password" class="control-label">Password</label>
+                <input form="Password" class="form-control" @bind="@obj.Password" />
+            </div>
+            @*<div class="form-group">
+                <label for="Designation" class="control-label"></label>
+                <select @bind="@obj.Designation" class="form-control">
+                    <option value="">-Select Designation-</option>
+                    <option value="IT">IT</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Administrator">Adminstrator</option>
+                    <option value="Intern">Intern</option>
+                </select>
+            </div>*@
+            @*<div class="form-group">
+                <label for="Gender" class="control-label"></label>
+                <select @bind="@obj.Gender" class="form-control">
+                    <option value="">-Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ID" class="control-label">ID</label>
+                <input form="Dob" class="form-control" @bind="@obj.Dob" />
+            </div>*@
+            <div class="form-group">
+                <label for="Phone" class="control-label">Phone</label>
+                <input form="Phone" class="form-control" @bind="@obj.Phone" />
+            </div>
+            <div class="form-group">
+                <label for="Address 1" class="control-label">Address1</label>
+                <input form="Address1" class="form-control" @bind="@obj.Address1" />
+            </div>
+            @*<div class="form-group">
+                <label for="Address 2" class="control-label">Address2</label>
+                <input form="Address2" class="form-control" @bind="@obj.Address2" />
+            </div>*@
+            <div class="form-group">
+                <label for="City" class="control-label">City</label>
+                <input form="City" class="form-control" @bind="@obj.City" />
+            </div>
+            <div class="form-group">
+                <label for="Province" class="control-label"></label>
+                <select @bind="@obj.Province" class="form-control">
+                    <option value="">-Select Province-</option>
+                    <option value="Limpopo">Limpopo</option>
+                    <option value="Gauteng">Gauteng</option>
+                    <option value="Mpumalanga">Mpumalanga</option>
+                    <option value="Free State">Free State</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Description" class="control-label">Description</label>
+                <input form="Description" class="form-control" @bind="@obj.Description" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@CreateClient" value="Save" />
+                <input type="button" class="btn btn-primary" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@code {
+    Client obj = new Client();
+    protected async void CreateClient()
+    {
+        await clientService.InsertClientAsync(obj);
+        NavigationManager.NavigateTo("Clients");
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("Clients");
+    }
+}
