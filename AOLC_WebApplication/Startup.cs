@@ -1,6 +1,6 @@
 using AOLC_WebApplication.Areas.Identity;
+using AOLC_WebApplication.Areas.Identity.Data;
 using AOLC_WebApplication.Data;
-using AOLCWebApplication.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -35,15 +35,15 @@ namespace AOLC_WebApplication
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddIdentity<AolcUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+             .AddDefaultTokenProviders()
+               .AddDefaultUI();
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
+            services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<AolcUser>>();
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddSingleton<WeatherForecastService>();
-
-            services.AddScoped<ClientService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

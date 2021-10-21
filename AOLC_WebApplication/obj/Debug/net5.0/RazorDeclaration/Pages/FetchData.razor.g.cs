@@ -13,77 +13,77 @@ namespace AOLC_WebApplication.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\DeltasLephalalaAOLCD\source\repos\AOLC_WebApplication\AOLC_WebApplication\_Imports.razor"
+#line 1 "C:\Users\TshifhiwaMaphangwaAO\Documents\GitHub\deltasLephalala\AOLC_WebApplication\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\DeltasLephalalaAOLCD\source\repos\AOLC_WebApplication\AOLC_WebApplication\_Imports.razor"
+#line 2 "C:\Users\TshifhiwaMaphangwaAO\Documents\GitHub\deltasLephalala\AOLC_WebApplication\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\DeltasLephalalaAOLCD\source\repos\AOLC_WebApplication\AOLC_WebApplication\_Imports.razor"
+#line 3 "C:\Users\TshifhiwaMaphangwaAO\Documents\GitHub\deltasLephalala\AOLC_WebApplication\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\DeltasLephalalaAOLCD\source\repos\AOLC_WebApplication\AOLC_WebApplication\_Imports.razor"
+#line 4 "C:\Users\TshifhiwaMaphangwaAO\Documents\GitHub\deltasLephalala\AOLC_WebApplication\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\DeltasLephalalaAOLCD\source\repos\AOLC_WebApplication\AOLC_WebApplication\_Imports.razor"
+#line 5 "C:\Users\TshifhiwaMaphangwaAO\Documents\GitHub\deltasLephalala\AOLC_WebApplication\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\DeltasLephalalaAOLCD\source\repos\AOLC_WebApplication\AOLC_WebApplication\_Imports.razor"
+#line 6 "C:\Users\TshifhiwaMaphangwaAO\Documents\GitHub\deltasLephalala\AOLC_WebApplication\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\DeltasLephalalaAOLCD\source\repos\AOLC_WebApplication\AOLC_WebApplication\_Imports.razor"
+#line 7 "C:\Users\TshifhiwaMaphangwaAO\Documents\GitHub\deltasLephalala\AOLC_WebApplication\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\DeltasLephalalaAOLCD\source\repos\AOLC_WebApplication\AOLC_WebApplication\_Imports.razor"
+#line 8 "C:\Users\TshifhiwaMaphangwaAO\Documents\GitHub\deltasLephalala\AOLC_WebApplication\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\DeltasLephalalaAOLCD\source\repos\AOLC_WebApplication\AOLC_WebApplication\_Imports.razor"
+#line 9 "C:\Users\TshifhiwaMaphangwaAO\Documents\GitHub\deltasLephalala\AOLC_WebApplication\_Imports.razor"
 using AOLC_WebApplication;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\DeltasLephalalaAOLCD\source\repos\AOLC_WebApplication\AOLC_WebApplication\_Imports.razor"
+#line 10 "C:\Users\TshifhiwaMaphangwaAO\Documents\GitHub\deltasLephalala\AOLC_WebApplication\_Imports.razor"
 using AOLC_WebApplication.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\DeltasLephalalaAOLCD\source\repos\AOLC_WebApplication\AOLC_WebApplication\Pages\FetchData.razor"
+#line 3 "C:\Users\TshifhiwaMaphangwaAO\Documents\GitHub\deltasLephalala\AOLC_WebApplication\Pages\FetchData.razor"
 using AOLC_WebApplication.Data;
 
 #line default
@@ -98,7 +98,7 @@ using AOLC_WebApplication.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "C:\Users\DeltasLephalalaAOLCD\source\repos\AOLC_WebApplication\AOLC_WebApplication\Pages\FetchData.razor"
+#line 39 "C:\Users\TshifhiwaMaphangwaAO\Documents\GitHub\deltasLephalala\AOLC_WebApplication\Pages\FetchData.razor"
        
     private WeatherForecast[] forecasts;
 
