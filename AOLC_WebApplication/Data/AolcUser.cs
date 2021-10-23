@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace AOLC_WebApplication.Areas.Identity.Data
+namespace AOLC_WebApplication.Data
 {
     public class AolcUser : IdentityUser
     {

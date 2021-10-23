@@ -1,9 +1,5 @@
-﻿using AOLC_WebApplication.Areas.Identity.Data;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AOLC_WebApplication.Data
 {
@@ -13,5 +9,6 @@ namespace AOLC_WebApplication.Data
             : base(options)
         {
         }
+        public DbSet<AolcUser> AolcUsers { get; set; }
     }
 }
