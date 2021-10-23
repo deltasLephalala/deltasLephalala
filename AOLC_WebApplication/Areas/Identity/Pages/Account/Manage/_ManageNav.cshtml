@@ -1,4 +1,4 @@
-﻿@using AOLC_WebApplication.Areas.Identity.Data
+﻿@using AOLC_WebApplication.Data
 @inject SignInManager<AolcUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();

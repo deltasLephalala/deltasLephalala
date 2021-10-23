@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Text.Encodings.Web;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +8,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
-using AOLC_WebApplication.Areas.Identity.Data;
+using AOLC_WebApplication.Data;
 
 namespace AOLC_WebApplication.Areas.Identity.Pages.Account
 {
