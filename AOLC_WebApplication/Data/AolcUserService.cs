@@ -34,7 +34,7 @@ namespace AOLC_WebApplication.Data
         #endregion
 
         #region Get User by Id
-        public async Task<AolcUser> GetUserAsync(int Id)
+        public async Task<AolcUser> GetUserAsync(string Id)
         {
             AolcUser aolcUser = await _appDBContext.AolcUsers.FirstOrDefaultAsync(c => c.Id.Equals(Id));
             return aolcUser;

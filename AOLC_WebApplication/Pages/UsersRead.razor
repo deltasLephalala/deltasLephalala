@@ -24,7 +24,7 @@ else
                 <th>PhoneNumber</th>
                 <th>Company</th>
                 <th>Designation</th>
-                <th>Address1</th>
+                @*<th>Address1</th>*@
                 <th>Address2</th>
                 <th>City</th>
                 <th>Province</th>
@@ -42,15 +42,15 @@ else
                     <td>@user.PhoneNumber</td>
                     <td>@user.CompanyName</td>
                     <td>@user.Designation</td>
-                    <td>@user.Address1</td>
+                    @*<td>@user.Address1</td>*@
                     <td>@user.Address2</td>
                     <td>@user.City</td>
                     <td>@user.Province</td>
                     <td>
-                        <a class="nav-link" href="EditUser/@user.Id">
+                        <a class="nav-link" href="UsersEdit/@user.Id">
                             <span class="oi oi-pencil" aria-hidden="true">Edit</span>
                         </a>
-                        <a class="nav-link" href="Delete/@user.Id">
+                        <a class="nav-link" href="UsersDelete/@user.Id">
                             <span class="oi oi-trash" aria-hidden="true">Delete</span>
                         </a>
                     </td>

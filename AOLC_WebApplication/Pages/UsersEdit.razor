@@ -1,5 +1,106 @@
-﻿<h3>EditClient</h3>
+﻿@page "/UsersEdit/{Id}"
+@using AOLC_WebApplication.Data
+@inject AolcUserService aolcUserService
+@inject NavigationManager NavigationManager
+
+<h2>Edit User</h2>
+<hr />
+
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <input form="UserId" class="form-control" @bind="@obj.Id" />
+            </div>
+            <div class="form-group">
+                <label for="FirstName" class="control-label">FirstName</label>
+                <input form="FirstName" class="form-control" @bind="@obj.FirstName" />
+            </div>
+            <div class="form-group">
+                <label for="LastName" class="control-label">LastName</label>
+                <input form="LastName" class="form-control" @bind="@obj.LastName" />
+            </div>
+            <div class="form-group">
+                <label for="Email" class="control-label">Email</label>
+                <input form="Email" class="form-control" @bind="@obj.Email" />
+            </div>
+
+            <div class="form-group">
+                <label for="PhoneNumber" class="control-label">PhoneNumber</label>
+                <input form="PhoneNumber" class="form-control" @bind="@obj.PhoneNumber" />
+            </div>
+            <div class="form-group">
+                <label for="Company" class="control-label">Company</label>
+                <input form="CompanyName" class="form-control" @bind="@obj.CompanyName" />
+            </div>
+            <div class="form-group">
+                <label for="Designation" class="control-label"></label>
+                <select @bind="@obj.Designation" class="form-control">
+                    <option value="">-Select Designation</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Administrator">Administrator</option>
+                    <option value="Superviser">Superviser</option>
+                    <option value="IT Developer">IT Developer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Address1" class="control-label">Address1</label>
+                <input form="Address1" class="form-control" @bind="@obj.Address1" />
+            </div>
+            <div class="form-group">
+                <label for="Address2" class="control-label">Address2</label>
+                <input form="Address2" class="form-control" @bind="@obj.Address2" />
+            </div>
+            <div class="form-group">
+                <label for="City" class="control-label">City</label>
+                <input form="City" class="form-control" @bind="@obj.City" />
+            </div>
+            <div class="form-group">
+                <label for="City" class="control-label">City</label>
+                <input form="City" class="form-control" @bind="@obj.City" />
+            </div>
+            <div class="form-group">
+                <label for="Province" class="control-label"></label>
+                <select @bind="@obj.Province" class="form-control">
+                    <option value="">-Select Province</option>
+                    <option value="Limpopo">Limpopo</option>
+                    <option value="Gauteng">Gauteng</option>
+                    <option value="Mpumalanga">Mpumalanga</option>
+                    <option value="Free State">Free State</option>
+                    <option value="North West">North West</option>
+                    <option value="Northern Cape">Northern Cape</option>
+                    <option value="Western Cape">Western Cape</option>
+                    <option value="KwaZulu-Natal">Free State</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@UpdateUser" value="Update" />
+                <input type="button" class="btn btn-primary" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
 
 @code {
-
+    [Parameter]
+    public string Id { get; set; }
+    AolcUser obj = new AolcUser();
+    protected override async Task OnInitializedAsync()
+    {
+        obj = await Task.Run(() => aolcUserService.GetUserAsync(Id));
+    }
+    protected async void UpdateUser()
+    {
+        await aolcUserService.UpdateUserAsync(obj);
+        NavigationManager.NavigateTo("AolcUser");
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("AolcUser");
+    }
 }
