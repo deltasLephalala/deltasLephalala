@@ -82,40 +82,14 @@ using AOLC_WebApplication.Shared;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "C:\Users\DeltasLephalalaAOLCD\Documents\GitHub\deltasLephalala\AOLC_WebApplication\Pages\AddClient.razor"
-using AOLCWebApplication.Data;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/AddClient")]
-    public partial class AddClient : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
+    public partial class Index___Copy : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 97 "C:\Users\DeltasLephalalaAOLCD\Documents\GitHub\deltasLephalala\AOLC_WebApplication\Pages\AddClient.razor"
-       
-    Client obj = new Client();
-    protected async void CreateClient()
-    {
-        await clientService.InsertClientAsync(obj);
-        NavigationManager.NavigateTo("Clients");
-    }
-    void Cancel()
-    {
-        NavigationManager.NavigateTo("Clients");
-    }
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ClientService clientService { get; set; }
     }
 }
 #pragma warning restore 1591

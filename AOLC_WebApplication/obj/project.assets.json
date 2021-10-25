@@ -7744,23 +7744,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\TshifhiwaMaphangwaAO\\.nuget\\packages\\": {},
+    "C:\\Users\\KhutsoMabatamelaAOLC\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TshifhiwaMaphangwaAO\\Documents\\GitHub\\deltasLephalala\\AOLC_WebApplication\\AOLC_WebApplication.csproj",
+      "projectUniqueName": "C:\\Users\\KhutsoMabatamelaAOLC\\Desktop\\deltasLephalala\\AOLC_WebApplication\\AOLC_WebApplication.csproj",
       "projectName": "AOLC_WebApplication",
-      "projectPath": "C:\\Users\\TshifhiwaMaphangwaAO\\Documents\\GitHub\\deltasLephalala\\AOLC_WebApplication\\AOLC_WebApplication.csproj",
-      "packagesPath": "C:\\Users\\TshifhiwaMaphangwaAO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TshifhiwaMaphangwaAO\\Documents\\GitHub\\deltasLephalala\\AOLC_WebApplication\\obj\\",
+      "projectPath": "C:\\Users\\KhutsoMabatamelaAOLC\\Desktop\\deltasLephalala\\AOLC_WebApplication\\AOLC_WebApplication.csproj",
+      "packagesPath": "C:\\Users\\KhutsoMabatamelaAOLC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\KhutsoMabatamelaAOLC\\Desktop\\deltasLephalala\\AOLC_WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\TshifhiwaMaphangwaAO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\KhutsoMabatamelaAOLC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

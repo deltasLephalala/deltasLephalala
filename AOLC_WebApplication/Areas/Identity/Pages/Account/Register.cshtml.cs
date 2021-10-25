@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
-using AOLC_WebApplication.Areas.Identity.Data;
+using AOLC_WebApplication.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -85,10 +84,10 @@ namespace AOLC_WebApplication.Areas.Identity.Pages.Account
             [Display(Name = "Province")]
             public string Province { get; set; }
 
-            [Required]
-            [DataType(DataType.Text)]
-            [Display(Name = "Designation")]
-            public string Designation { get; set; }
+            //[Required]
+            //[DataType(DataType.Text)]
+            //[Display(Name = "Designation")]
+            //public string Designation { get; set; }
 
             [Required]
             [DataType(DataType.Text)]

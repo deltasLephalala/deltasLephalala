@@ -26,12 +26,10 @@
                 <label asp-for="Input.Role"></label>
                 <select asp-for="Input.Role" class="form-control">
                     <option selected value="">None</option>
-                    @{ foreach (var myrole in Model.listRoles)
-                        {
-                            <option bind-value=@myrole .>@myrole.Name</option>
-                        }
-                    }
-
+                    <option value="Client">Client</option>
+                    <option value="Employee">Employee</option>
+                    <option value="Administrator">Administrator</option>
+                    <option value="Content Creator">Content Creator</option>
                 </select>
                 <span asp-validation-for="Input.Role" class="text-danger"></span>
             </div>
