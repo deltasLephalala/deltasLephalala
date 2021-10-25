@@ -90,7 +90,7 @@ using AOLC_WebApplication.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 52 "C:\Users\DeltasLephalalaAOLCD\Documents\GitHub\deltasLephalala\AOLC_WebApplication\Shared\NavMenu.razor"
+#line 53 "C:\Users\DeltasLephalalaAOLCD\Documents\GitHub\deltasLephalala\AOLC_WebApplication\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
     private bool expandSubMenu; //add
