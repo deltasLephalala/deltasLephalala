@@ -17,14 +17,14 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>User Id</th>
+                @*<th>User Id</th>*@
                 <th>FirstName</th>
                 <th>LastName</th>
                 <th>Email</th>
                 <th>PhoneNumber</th>
                 <th>Company</th>
                 <th>Designation</th>
-                @*<th>Address1</th>*@
+                <th>Address1</th>
                 <th>Address2</th>
                 <th>City</th>
                 <th>Province</th>
@@ -35,14 +35,14 @@ else
             @foreach (var user in UserObj)
             {
                 <tr>
-                    <td>@user.Id</td>
+                    @*<td>@user.Id</td>*@
                     <td>@user.FirstName</td>
                     <td>@user.LastName</td>
                     <td>@user.Email</td>
                     <td>@user.PhoneNumber</td>
                     <td>@user.CompanyName</td>
                     <td>@user.Designation</td>
-                    @*<td>@user.Address1</td>*@
+                    <td>@user.Address1</td>
                     <td>@user.Address2</td>
                     <td>@user.City</td>
                     <td>@user.Province</td>
@@ -52,6 +52,7 @@ else
                         </a>
                         <a class="nav-link" href="UsersDelete/@user.Id">
                             <span class="oi oi-trash" aria-hidden="true">Delete</span>
+
                         </a>
                     </td>
                 </tr>
