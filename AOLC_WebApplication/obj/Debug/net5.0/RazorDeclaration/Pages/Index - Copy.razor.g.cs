@@ -82,14 +82,42 @@ using AOLC_WebApplication.Shared;
 #line default
 #line hidden
 #nullable disable
+<<<<<<< HEAD:AOLC_WebApplication/obj/Debug/net5.0/RazorDeclaration/Pages/Index - Copy.razor.g.cs
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index___Copy : Microsoft.AspNetCore.Components.ComponentBase
+=======
+#nullable restore
+#line 2 "C:\Users\DeltasLephalalaAOLCD\Documents\GitHub\deltasLephalala\AOLC_WebApplication\Pages\UsersRead.razor"
+using AOLC_WebApplication.Data;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/AolcUser")]
+    public partial class UsersRead : Microsoft.AspNetCore.Components.ComponentBase
+>>>>>>> b14ff0204714f20db65b8328837eb21739fdee2b:AOLC_WebApplication/obj/Debug/net5.0/RazorDeclaration/Pages/UsersRead.razor.g.cs
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+<<<<<<< HEAD:AOLC_WebApplication/obj/Debug/net5.0/RazorDeclaration/Pages/Index - Copy.razor.g.cs
+=======
+#nullable restore
+#line 64 "C:\Users\DeltasLephalalaAOLCD\Documents\GitHub\deltasLephalala\AOLC_WebApplication\Pages\UsersRead.razor"
+       
+    List<AolcUser> UserObj;
+    protected override async Task OnInitializedAsync()
+    {
+        UserObj = await Task.Run(() => AolcUserService.GetAllUsersAsync());
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AolcUserService AolcUserService { get; set; }
+>>>>>>> b14ff0204714f20db65b8328837eb21739fdee2b:AOLC_WebApplication/obj/Debug/net5.0/RazorDeclaration/Pages/UsersRead.razor.g.cs
     }
 }
 #pragma warning restore 1591
