@@ -100,10 +100,10 @@ using AOLC_WebApplication.Data;
 #nullable restore
 #line 65 "C:\Users\DeltasLephalalaAOLCD\Documents\GitHub\deltasLephalala\AOLC_WebApplication\Pages\UsersRead.razor"
        
-    List<AolcUser> UserObj;
+    IList<AolcUser> UserObj;
     protected override async Task OnInitializedAsync()
     {
-        UserObj = await Task.Run(() => AolcUserService.GetAllUsersAsync());
+        UserObj = await Task.Run(() => AolcUserService.GetUsersInRoleAsync(""));
     }
 
 #line default

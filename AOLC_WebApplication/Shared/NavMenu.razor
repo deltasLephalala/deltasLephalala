@@ -1,4 +1,7 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
+﻿@using AOLC_WebApplication.Data
+@using Microsoft.AspNetCore.Identity
+
+<div class="top-row pl-4 navbar navbar-dark">
     <a class="navbar-brand" href="">AOLC_WebApplication</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
@@ -23,22 +26,26 @@
             {
                 <ul class="nav flex-column">
                     <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="AolcUser">
+                        <NavLink class="nav-link"  href="AolcUser">
+
+                            @*@serv.chosenRole="Administrator"*@
                             <span class="oi oi-list" aria-hidden="true"></span> Admins
+
                         </NavLink>
                     </li>
 
 
 
-                    <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="Admins">
+                    <li class="nav-item px-3" >
+                        <NavLink class="nav-link" href="Client">
+                            @*@serv.chosenRole="Client"*@
                             <span class="oi oi-list" aria-hidden="true"></span> Clients
                         </NavLink>
                     </li>
 
                     <li class="nav-item px-3">
                         <NavLink class="nav-link" href="Stuff">
-                            <span class="oi oi-list" aria-hidden="true"></span> Stuff
+                            <span class="oi oi-list" aria-hidden="true"></span> Staff
                         </NavLink>
                     </li>
                 </ul>
@@ -55,6 +62,8 @@
     private bool expandSubMenu; //add
 
     private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    //AolcUserService serv ;
 
     private void ToggleNavMenu()
     {

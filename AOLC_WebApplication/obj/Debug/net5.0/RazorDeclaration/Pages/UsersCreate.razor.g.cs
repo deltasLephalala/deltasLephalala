@@ -82,6 +82,14 @@ using AOLC_WebApplication.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\DeltasLephalalaAOLCD\Documents\GitHub\deltasLephalala\AOLC_WebApplication\Pages\UsersCreate.razor"
+using AOLC_WebApplication.Data;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/UsersCreate")]
     public partial class UsersCreate : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -89,6 +97,25 @@ using AOLC_WebApplication.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 76 "C:\Users\DeltasLephalalaAOLCD\Documents\GitHub\deltasLephalala\AOLC_WebApplication\Pages\UsersCreate.razor"
+       
+    AolcUser obj = new AolcUser();
+    protected async void CreateUser()
+    {
+        await aolcUserService.CreateUserAsync(obj);
+        NavigationManager.NavigateTo("AolcUser");
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("AolcUser");
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AolcUserService aolcUserService { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -82,6 +82,14 @@ using AOLC_WebApplication.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\DeltasLephalalaAOLCD\Documents\GitHub\deltasLephalala\AOLC_WebApplication\Pages\UsersDelete.razor"
+using AOLC_WebApplication.Data;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/UsersDelete/{Id}")]
     public partial class UsersDelete : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -89,6 +97,31 @@ using AOLC_WebApplication.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 70 "C:\Users\DeltasLephalalaAOLCD\Documents\GitHub\deltasLephalala\AOLC_WebApplication\Pages\UsersDelete.razor"
+       
+    [Parameter]
+    public string Id { get; set; }
+    AolcUser obj = new AolcUser();
+    protected override async Task OnInitializedAsync()
+    {
+        obj = await Task.Run(() => aolcUserService.GetUserAsync(Id));
+    }
+    protected async void DeleteUser()
+    {
+        await aolcUserService.DeleteUserAsync(obj);
+        NavigationManager.NavigateTo("AolcUser");
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("AolcUser");
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AolcUserService aolcUserService { get; set; }
     }
 }
 #pragma warning restore 1591

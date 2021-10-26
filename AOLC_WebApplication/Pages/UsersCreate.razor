@@ -78,10 +78,10 @@
     protected async void CreateUser()
     {
         await aolcUserService.CreateUserAsync(obj);
-        NavigationManager.NavigateTo("AolcUsers");
+        NavigationManager.NavigateTo("AolcUser");
     }
     void Cancel()
     {
-        NavigationManager.NavigateTo("AolcUsers");
+        NavigationManager.NavigateTo("AolcUser");
     }
 }
